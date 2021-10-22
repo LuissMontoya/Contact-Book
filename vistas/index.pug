@@ -1,6 +1,17 @@
 html 
     head  
-    title = titulo 
+    title= titulo 
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet", href="estilos.css")
+    body 
+        div.container
+            input(type="text" placeholder="nombre" id="nombre")
+            input(type="text" placeholder="número" id="numero")
+            button(id="btn_agregar") Agregar Contacto
+        
+            each contacto in contactos 
+                div.contacto
+                    p=`${contacto.id_contacto} -- ${contacto.nombre} -- ${contacto.numero}`
+                    span(class="borrar material-icons" id=contacto.id_contacto) delete 
 
-body 
-    p= dato
+    script(src="funciones.js")
