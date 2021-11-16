@@ -9,12 +9,14 @@ const conector = mysql.createConnection({
   database: "agenda_contactos",
 });
 
+/*
 const conectar = () => {
   conector.connect((err) => {
     if (err) throw err;
     console.log("Conectado a la Base de Datos");
   });
 };
+*/
 
 const agregarContacto = (numero, nombre) => {
   const sql = `INSERT INTO agenda (id_contacto, numero, nombre) VALUES (${null},${numero},"${nombre}")`;
